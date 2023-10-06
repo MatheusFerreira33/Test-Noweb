@@ -1,66 +1,61 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Pré-requisitos
+Antes de começar a usar o projeto Laravel, certifique-se de que você tenha as seguintes dependências instaladas:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## PHP: 
+Certifique-se de ter o PHP instalado na sua máquina. Você pode baixá-lo em php.net.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Composer: 
+O Composer é um gerenciador de dependências para PHP. Certifique-se de tê-lo instalado. Você pode baixá-lo em getcomposer.org.
 
-## Learning Laravel
+## MySQL: 
+Você precisará de um servidor MySQL instalado para armazenar os dados do projeto. Você pode baixar o MySQL em mysql.com.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Passos para Utilizar o Projeto Laravel
+Aqui estão os passos para utilizar o projeto Laravel:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Clone o Repositório:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Clone o repositório do projeto Laravel em sua máquina usando o seguinte comando no terminal:
 
-## Laravel Sponsors
+### git clone [URL do Repositório]
+Substitua [URL do Repositório] pela URL do repositório do projeto Laravel.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+# Instale as Dependências:
 
-### Premium Partners
+Navegue até o diretório do projeto Laravel e execute o seguinte comando para instalar as dependências do Composer:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### comando: "composer install"
+Isso instalará todas as bibliotecas e dependências necessárias para o projeto.
 
-## Contributing
+## Configure o Banco de Dados:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Crie um banco de dados MySQL para o seu projeto. Você pode usar uma ferramenta de gerenciamento de banco de dados, como o phpMyAdmin, para criar o banco de dados.
 
-## Code of Conduct
+Depois de criar o banco de dados, abra o arquivo .env no diretório raiz do projeto e atualize as configurações de banco de dados, incluindo o nome do banco de dados, nome de usuário e senha:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=seu_banco_de_dados
+DB_USERNAME=seu_usuario
+DB_PASSWORD=sua_senha
+Execute as Migrações:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Execute as migrações do Laravel para criar as tabelas no banco de dados:
 
-## License
+### comando: "php artisan migrate"
+Inicie o Servidor de Desenvolvimento:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Inicie o servidor de desenvolvimento do Laravel com o seguinte comando:
+
+### comando: "php artisan serve"
+Isso iniciará o servidor na URL http://localhost:8000.
+
+Acesse o Projeto:
+
+Use o insomnia que esta na raiz do projeto para testar aplicação.
