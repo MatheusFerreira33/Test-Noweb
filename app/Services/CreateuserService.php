@@ -10,7 +10,7 @@ class CreateUserService{
         $findUser = User::firstWhere('email',$data['email']);
 
         if(!is_null($findUser)){
-            throw new Error('Email ja existe');
+            throw new Error('Email ja existe',409);
         }
 
         return User::create($data);
